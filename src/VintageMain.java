@@ -5,12 +5,6 @@ import java.util.Scanner;
 import java.util.Objects;
 import java.time.LocalDate;
 
-/**
- * Escreva uma descrição da classe VintageMain aqui.
- * 
- * @author (seu nome) 
- * @version (um número da versão ou uma data)
- */
 public class VintageMain implements Serializable
 {
     private static final String nomeFicheiro = "./estado/loja.ser";
@@ -188,7 +182,7 @@ public class VintageMain implements Serializable
             }
         
             for(User user : listaUsersRegistados){
-                ArrayList<Artigos> listaVendas = user.getListaCompras();
+                ArrayList<Artigos> listaVendas = user.getListaVendas();
                 ArrayList<Artigos> novaListaVendas = new ArrayList<>(listaVendas);
                 for (Artigos artigoRem : listaVendas){
                     if(artigoRem.equals(artigo)){
@@ -213,7 +207,7 @@ public class VintageMain implements Serializable
             
             for(User user : listaUsersRegistados){
                 if(user.getListaCompras().contains(artigo)){
-                    ArrayList<Artigos> listaCompras = user.getListaVendas();
+                    ArrayList<Artigos> listaCompras = user.getListaCompras();
                     ArrayList<Artigos> novaListaCompras = new ArrayList<>(listaCompras);
                     for (Artigos artigoRem : listaCompras){
                         if(artigoRem.equals(artigo)){
