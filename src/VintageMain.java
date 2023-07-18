@@ -188,7 +188,7 @@ public class VintageMain implements Serializable
             }
         
             for(User user : listaUsersRegistados){
-                ArrayList<Artigos> listaVendas = user.getListaVendas();
+                ArrayList<Artigos> listaVendas = user.getListaCompras();
                 ArrayList<Artigos> novaListaVendas = new ArrayList<>(listaVendas);
                 for (Artigos artigoRem : listaVendas){
                     if(artigoRem.equals(artigo)){
