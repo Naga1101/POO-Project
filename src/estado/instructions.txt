@@ -1,0 +1,1 @@
+To load the saved state you need to run the main and then type the S in the first question. This will load a state of the store with existing users, existing shipping companies, existing items being sold and one current order. In case you type N it will only load the existing users and the shipping companies without anything more in the store.
